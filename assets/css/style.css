@@ -142,8 +142,8 @@ h6 {
 
 #header .logo {
   font-size: 30px;
-  margin: 0;
-  padding: 0;
+  margin-top: 100px;
+  margin: 20px;
   line-height: 1;
   font-weight: 500;
   letter-spacing: 2px;
@@ -155,7 +155,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 80px;
 }
 
 /*--------------------------------------------------------------
@@ -165,7 +165,7 @@ h6 {
 * Desktop Navigation 
 */
 .navbar {
-  padding: 0;
+  margin-top: 20px;
 }
 
 .navbar ul {
@@ -401,6 +401,17 @@ h6 {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
   visibility: visible !important;
+}
+
+.discount-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 0px;
+  z-index: 1000; /* To keep it above other elements */
 }
 
 /*--------------------------------------------------------------
