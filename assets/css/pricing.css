@@ -23,7 +23,6 @@ h1 {
 }
 
 .input-group {
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,49 +34,73 @@ label {
   color: #555;
 }
 
+.ram-input {
+  display: flex;
+  align-items: center;
+}
+
 select,
-input[type="number"],
-button {
-  padding: 10px 20px;
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 400px;
+  margin: 0 5px;
+}
+
+button.decrease-btn,
+button.increase-btn {
+  padding: 10px 15px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-select,
-input[type="number"] {
-  border: 1px solid #ccc;
-  width: 300px;
-}
-
-.decbutton {
+button.decrease-btn {
   background-color: #3498db;
   color: white;
-  border: none;
-  padding: 3px 15px;
-  cursor: pointer;
-  margin: 0 220px;
-  margin-top: -30px;
-  transition: background-color 0.3s ease;
 }
 
-.incbutton {
-  background-color: #3498db;
+button.increase-btn {
+  background-color: #2ecc71;
   color: white;
-  border: none;
-  padding: 3px 15px;
-  cursor: pointer;
-  margin: 0 -220px;
-  margin-top: -30px;
-  transition: background-color 0.3s ease;
 }
 
-.decbutton:hover {
+button.decrease-btn:hover {
   background-color: #2980b9;
 }
 
-.incbutton:hover {
-  background-color: #2980b9;
+button.increase-btn:hover {
+  background-color: #27ae60;
+}
+
+/* Arrange the elements */
+.ram-input {
+  display: flex;
+  align-items: center;
+}
+
+button.decrease-btn {
+  order: -1; /* Places the decrease button first */
+}
+
+/* For phones */
+@media screen and (max-width: 480px) {
+  .ram-input {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  input[type="number"] {
+    width: 100px;
+    margin: 5px 0;
+  }
+  
+  button.decrease-btn,
+  button.increase-btn {
+    margin: 5px 0;
+  }
 }
 
 #result {
@@ -93,7 +116,6 @@ input[type="number"] {
 
 /* Plan Cards styles */
 .plan-cards {
-  text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -102,6 +124,7 @@ input[type="number"] {
 }
 
 .plan-card {
+  text-align: center;
   background-color: #1C1E36; /* Set theme color */
   color: #ffffff; /* Set text color to contrast */
   border-radius: 8px;
@@ -126,17 +149,20 @@ input[type="number"] {
   margin-bottom: 10px;
 }
 
+.plan-card h4 {
+  color: #ffffff;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
 .plan-card p {
+  text-align: center;
   margin: 5px 0;
   color: #ffffff;
   font-size: 16px; /* Adjusted font size for smaller screens */
-  display: flex;
   align-items: center;
-}
-
-.plan-card p::before {
-  content: '•'; /* Use bullet point as icon */
-  margin-right: 8px;
 }
 
 /* Media Query for Tablets and Larger Screens */
