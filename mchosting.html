@@ -33,17 +33,20 @@
 <body style="background-color: #101314;">
 
   <!-- ======= Header ======= -->
-  <header style="background-color: black;" id="header" class="fixed-top ">
+  <div class="discount-navbar">
+    <p style="margin-top: 10px;font-weight: 300;">USE CODE: <span style="margin-top: 10px;font-weight: 1000;">GAME10</span> WHILE BUYING FROM DISCORD TO GET ADDITIONAL 5% FLAT DISCOUNT PERMANENTLY(LIMITED TIME OFFER) </p>
+</div>
+  <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">MemoryBoot</a></h1>
+      <!-- <h1 class="logo me-auto"><a href="index.html">MemoryBoot</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html">About</a></li>
+          <li><a class="nav-link scrollto active" href="index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
           <li class="dropdown"><a href="#"><span>Hosting</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="mchosting.html">Minecraft Server Hosting</a></li>
@@ -151,7 +154,7 @@
     <div class="hibo">
     <section id="pricing">
       <div class="container">
-        <h1 style="margin: 0 auto;">Premium Cost Estimator</h1>
+        <h1 style="margin: 0 100px;margin-top: 100px;">Premium Cost Estimator</h1>
         <h4 style="text-align: center;">UNLIMITED CPU</h4>
         <h4 style="text-align: center;">UNLIMITED STORAGE</h4>
         <h4 style="text-align: center;">10 BACKUPS</h4>
@@ -174,10 +177,12 @@
         </div>
     
         <div class="input-group">
-          <label for="ram">Select RAM (GB):(USE ARROW KEYS TO INCREASE OR DECREASE)</label>
-          <input type="text" id="ram" name="ram" value="32" readonly>
-          <button class="decbutton" onclick="decrementRam()">-</button>
-          <button class="incbutton" onclick="incrementRam()">+</button>
+          <label for="ram">RAM:</label>
+          <div class="ram-input">
+            <button class="decrease-btn" onclick="decrementRam()">-</button>
+            <input type="number" id="ram" value="32" min="32" max="64" readonly>
+            <button class="increase-btn" onclick="incrementRam()">+</button>
+          </div>
         </div>
     
         <div class="input-group">
