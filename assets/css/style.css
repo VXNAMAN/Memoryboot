@@ -402,18 +402,24 @@ h6 {
   display: block;
   visibility: visible !important;
 }
-@media screen and (max-width: 600px) {
-  .discount-navbar {
- position: fixed;
+
+.discount-navbar {
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: #3498db;
   color: #fff;
   text-align: center;
   padding: 0px;
-  z-index: 1000; 
+  z-index: 1000; /* To keep it above other elements */
+}
+
+@media screen and (max-width: 768px) {
+  .discount-navbar {
+    display: none;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Hero Section
