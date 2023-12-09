@@ -11,11 +11,11 @@ function updateProcessorOptions(location) {
 
   switch (location) {
       case 'singapore':
-          processors = ['AMD Ryzen 9 7900(5.4 GHz)'];
+          processors = ['AMD Ryzen 5 3900(4.6GHz)'];
           perGbCost = 240;
           break;
       case 'europe':
-          processors = ['AMD Ryzen 5 3900(4.6GHz)'];
+          processors = ['AMD Ryzen 9 7900(5.4 GHz)'];
           perGbCost = 80;
           break;
       case 'india':
