@@ -33,7 +33,6 @@ html::-webkit-scrollbar-thumb:active {
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
-  cursor: url('../img/icons8-server-50.png'), auto;
 }
 
 a {
